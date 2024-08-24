@@ -1,10 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root{
+    --smallTextColor: #1C1C1C;
+    --buttonBackgroundColor: #FFBB1C;
+    --lightTextColor: white;
+    --smallDevicesMaxWidth: 767px;
+    --smallDevicesMinWidth: 480px;
+    --mediumDevicesMaxWidth: 991px;
+    --mediumDevicesMinWidth: 768px;
+    
+}
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+.our-values-section,
+.what-they-say-section,
+.what-they-say,
+.left-side,
+.people-that-say-slider,
+.footer-lower-div ul,
+.repairs-over-replacement-sect,
+.left-side-footer ul,
+.power-section,
+.left-side-footer,
+footer,
+.footer-upper-div,
+.subscribe-container-input,
+.repairs-over-replacement-section{
+    display: flex;
 }
 .our-values-section{
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -27,16 +54,14 @@ body{
     margin-top: 15px;
 }
 .what-they-say-section{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    padding: 5% 8%;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
 }
 .pagination-dots{   
     display: grid;
-    width: 60%;
-    /* grid-column-gap: 5px; */
+    width: 30%;
     grid-template-columns: repeat(5,1fr);
-    /* align-items: center; */
 }
 .dot{
     color: #D9D9D9;
@@ -54,10 +79,7 @@ body{
     padding: 1.5em;
 }
 .what-they-say-title{
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    flex-direction: column;
+    width: 100%;
 }
 .what-they-say-title h1{
     font-weight: 700;
@@ -69,7 +91,7 @@ body{
     font-size: 16px;
 }
 .what-they-say{
-    display: flex;
+    justify-content: center;
 }
 .what-they-say-container{
     background-color: #f5fffd;
@@ -81,7 +103,6 @@ body{
     font-weight: 400;
 }
 .left-side{
-    display: flex;
     align-items: center;
     justify-content: start;
 }
@@ -89,7 +110,7 @@ body{
     line-height: 0.5;
     margin-left: 10px;
     font-size: 16px;
-    color: #1C1C1C;
+    color: var(--smallTextColor);
 }
 .user-name{
     font-weight: 700;
@@ -98,43 +119,139 @@ body{
     font-weight: 400;
 }
 .people-that-say-slider{
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .right-side .btn{
-    border: 1px solid #1C1C1C;
+    border: 1px solid var(--smallTextColor);
     border-radius: 50%;
     width: 45px;
     height: 45px;
     background-color: transparent;
     cursor: pointer;
 }
+.repairs-over-replacement-section{
+    background-image: url('./Images/8116\ 1.png');
+    width: 100%;
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    justify-content: center;
+}
+.repairs-over-replacement-div{
+    background-color: rgba(0, 0, 0, 0.57);
+    padding: 20px;
+    text-align: center;
+    color: var(--lightTextColor);
+    border-radius: 12px;
+    width: 47%;
+}
+.repairs-over-replacement-div h1{
+    font-size: 42px;
+    font-weight: 600;
+}
+.repairs-over-replacement-div p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.power-section{
+    justify-content: center;
+    align-items: center;
+    background-image: url('./Images/8116\ 1\ \(1\).png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 80vh;
+}
+.power-div{
+    color: var(--lightTextColor);
+}
+.power-div div{
+    width: 58%;
+}
+.power-div h1{
+    font-size: 42px;
+    font-weight: 600;
+    
+}
+.power-div p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.power-div button{
+    border: none;
+    color: #2A3334;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: var(--buttonBackgroundColor);
+    border-radius: 109px;
+    padding: 10px 35px;
+}
+
+
+/* footer styling */
+
 footer{
     background-color: #283646;
-    color: white;
-    display: flex;
+    color: var(--lightTextColor);
     align-items: center;
     justify-content: center;
     padding: 40px 0;
 }
 
 .footer-upper-div{
-    display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 50px;
 }
+.left-side-footer ul{
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 50px;
+}
+.left-side-footer ul li{
+    cursor: pointer;
+    margin-right: 10px;
+}
+.left-side-footer{
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+}
+@media (max-width: 767px){
+    .footer-upper-div{
+        display: block;
+    }
+    .left-side-footer{
+        align-items: start;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+    }
+    .left-side-footer ul{
+        margin: 0;
+        margin-top: 20px;
+        /* background-color: red; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+    }
+    .footer-lower-div ul{
+        display: block;
+        line-height: 30px;
+    }
+}
 .container{
     width: 80%;
-
 }
 .subscribe-container-input{
     border: 1px solid #92989F;
     border-radius: 40px;
     width: 100%;
-    /* padding: 10px; */
-    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #2f4055;
@@ -145,15 +262,16 @@ footer{
     border: none;
     outline: none;
     padding: 10px;
+    width: 60%;
     background-color: transparent;
     color: #92989F;
 }
 .subscribe-btn{
     border-radius: 40px;
     border: none;
-    background-color: #FFBB1C;
+    background-color: var(--buttonBackgroundColor);
     padding: 12px;
-    color: white;
+    color: var(--lightTextColor);
     width: 140px;
 }
 .footer-lower-div ul{
@@ -161,7 +279,6 @@ footer{
     padding: 0;
     margin-top: 50px;
     list-style: none;
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -169,22 +286,4 @@ footer{
 hr{
     border: none;
     border-top: 1px solid #92989F;
-}
-.repairs-over-replacement-section{
-    background-image: url('./Images/8116\ 1.png');
-    width: 100%;
-    height: 80vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.repairs-over-replacement-div{
-    background-color: rgb(0, 0, 0,0.57);
-    text-align: center;
-    color: white;
-    border-radius: 12px;
-    width: 60%;
 }
