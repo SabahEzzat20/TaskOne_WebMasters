@@ -22,7 +22,7 @@ header{
     align-items: center;
     color: var(--lightTextColor);
     background-color: #0B9586;
-    height: 86px;
+    /* height: 86px; */
     padding: 10px 0;
     margin-bottom: 0;
 }
@@ -38,6 +38,10 @@ nav ul li a{
 }
 .callUs-div{
     text-align: end;
+}
+.callUs-div p span{
+    font-size: 24px;
+    font-weight: 700;
 }
 #check{
     display: none;
@@ -173,7 +177,7 @@ nav ul,
     font-weight: 600;
     color: #101828;
 }
-.card-text p{
+.card-text p, .installers-left-side p{
     font-size: 16px;
     font-weight: 400;
     color: #475467;
@@ -195,7 +199,108 @@ nav ul,
     }
 }
 
+.installers-section{
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+.installers-div{
+    justify-content: space-between;
+}
+.installers-left-side h1{
+    color: #101828;
+
+}
+.installers-left-side {
+    width: 50%;
+}
+.installers-left-side ul{
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #101828;
+    line-height: 40px;
+    margin-top: 50px;
+}
+.installers-left-side ul li span{
+    color: #84BD3A;
+}
+.solar-charging-div{
+    background-color: var(--buttonBackgroundColor);
+    border-radius: 12px;
+    width: 20%;
+    color: #2A3334;
+    font-weight: 400;
+    font-size: 18px;
+    position: absolute;
+    /* top: 30px; */
+    margin-top: -240px;
+    margin-left: -50px;
+    /* left: -50px; */
+    padding: 20px;
+}
+.energy-innovators-section{
+    background-color: rgb(255, 252, 244);
+    justify-content: center;
+    align-items: center;
+    margin: -25px;
+    padding: 50px 0;
+}
+.energy-icon div{
+    background-color: #3CAB90;
+    border-radius: 12px;
+    padding: 8px;
+    /* width: 50px;
+    height: 46px; */
+}
+.energy-icon{
+    border: 12px solid #E2F0E5;
+    border-radius: 15px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.energy-card{
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid #3CAB90;
+    background-color: #F5F8EF;
+}
+.mock-image{
+    border-radius: 15px;
+    background-color: rgb(229,229,229);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.energy-div{
+    justify-content: space-between;
+
+}
+.energy-title{
+    width: 100%;
+}
+.energy-title h1{
+    color: #101828;
+    font-weight: 600;
+    font-size: 42px;
+}
+.energy-title p{
+    color: #475467;
+    font-weight: 400;
+    font-size: 18px;
+}
 header,
+.energy-div,
+.installers-div,
+.energy-innovators-section,
+.installers-section,
 .solar-kits-cards,
 .header-div,
 nav ul,
@@ -333,7 +438,7 @@ footer,
     border-radius: 12px;
     width: 47%;
 }
-.repairs-over-replacement-div h1{
+.repairs-over-replacement-div h1,.installers-left-side h1{
     font-size: 42px;
     font-weight: 600;
 }
