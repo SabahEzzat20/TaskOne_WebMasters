@@ -9,12 +9,136 @@
     --mediumDevicesMinWidth: 768px;
     
 }
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
+header{
+    justify-content: center;
+    align-items: center;
+    color: var(--lightTextColor);
+    background-color: #0B9586;
+    height: 86px;
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+nav ul{
+    justify-content: space-between;
+    /* background-color: red; */
+    margin-right: 100px  ;
+}
+
+nav ul li a{
+    color: var(--lightTextColor);
+    margin-right: 60px;
+}
+.callUs-div{
+    text-align: end;
+}
+#check{
+    display: none;
+}
+label{
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.2s;
+    display: none;
+}
+
+label:active{
+    transform: scale(.90);
+}
+a{
+    text-decoration: none;
+}
+nav ul,
+.left-side-footer ul,
+.footer-lower-div ul
+{
+    list-style: none;
+}
+.header-div{
+    justify-content: space-between;
+    align-items: center;
+}
+.first-section{
+    background-image: url("./Images/solar-panels-meadow\ 1.png");
+    background-color: red;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    display: flex;
+    width: fit-content;
+    margin-top: -100px;
+    /* margin-bottom: 100px; */
+    /* background-color: #ff0000; */
+    /* padding: 0; */
+    justify-content: center;
+    align-items: center;
+}
+.line::before{
+    content: "01";
+    margin-right: 15px;
+    color: white;
+}
+.line::after{
+    margin-left: 15px;
+    content: "04";
+    color: white;
+}
+.secondLine{
+    border-top: 4px solid #575757;
+    width: 150px;
+}
+.firstLine{
+    border-top: 4px solid white;
+    width: 80px;
+}
+.first-section-div{
+    color: var(--lightTextColor);
+}
+.first-section-div h1{
+    font-size: 52px;
+    font-weight: 600;
+}
+.first-section-div p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.text-div{
+    margin-top: 100px;
+    width: 60%;
+}
+.first-section-buttons button{
+    border-radius: 100px;
+    margin-top: 20px;
+    border: none;
+    padding: 10px 40px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.call-btn{
+    color: var(--lightTextColor);
+    background-color: #3CAB90;
+}
+.call-back-btn{
+    color: #2A3334;
+    background-color: var(--buttonBackgroundColor);
+}
+header,
+.header-div,
+nav ul,
 .our-values-section,
 .what-they-say-section,
 .what-they-say,
@@ -209,7 +333,6 @@ footer{
     margin-bottom: 50px;
 }
 .left-side-footer ul{
-    list-style: none;
     justify-content: space-between;
     padding: 0;
     margin-top: 50px;
@@ -278,7 +401,6 @@ footer{
     color: #92989F;
     padding: 0;
     margin-top: 50px;
-    list-style: none;
     justify-content: space-between;
     align-items: center;
 }
