@@ -315,6 +315,7 @@ nav ul,
 .left-side-footer ul,
 .power-section,
 .left-side-footer,
+.what-they-say,
 footer,
 .footer-upper-div,
 .subscribe-container-input,
@@ -343,6 +344,50 @@ footer,
     grid-column-gap: 1em;
     margin-top: 15px;
 }
+.energy-cards{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 992px){
+    .our-values-section-cards{
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+        grid-template-rows: repeat(2,1fr);
+        grid-row-gap: 1em;
+    }
+    .what-they-say{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .what-they-say-upper{
+        align-items: start;
+        justify-content: center;
+        /* text-align: center; */
+        flex-direction: column;
+    }
+    .energy-div{
+        flex-direction: column;
+    }
+    .energy-cards{
+        justify-content: center;
+        /* flex-direction: column; */
+    }
+}
+@media screen and (max-width: 768px){
+    .our-values-section-cards{
+        grid-template-columns: 1fr;
+        width: 100%;
+        grid-template-rows: repeat(3,1fr);
+        grid-row-gap: 1em;
+    }
+    .energy-cards{
+        /* justify-content: center; */
+        flex-direction: column;
+    }
+    .energy-card{
+        width: 100%;
+    }
+}
 .what-they-say-section{
     align-items: center;
     justify-content: center;
@@ -350,7 +395,7 @@ footer,
 }
 .pagination-dots{   
     display: grid;
-    width: 30%;
+    width: 50%;
     grid-template-columns: repeat(5,1fr);
 }
 .dot{
@@ -382,6 +427,13 @@ footer,
 }
 .what-they-say{
     justify-content: center;
+    gap: 10px;
+}
+.what-they-say-upper{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    /* flex-direction: row; */
 }
 .what-they-say-container{
     background-color: #f5fffd;
@@ -512,7 +564,7 @@ footer{
     justify-content: space-between;
     width: 45%;
 }
-@media (max-width: 767px){
+@media (max-width: 768px){
     .footer-upper-div{
         display: block;
     }
