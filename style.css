@@ -4,7 +4,7 @@
     --buttonBackgroundColor: #FFBB1C;
     --lightTextColor: white;
 }
-*{
+*,*::after,*::before{
     box-sizing: border-box;
 }
 body{
@@ -17,13 +17,13 @@ header{
     align-items: center;
     color: var(--lightTextColor);
     background-color: #0B9586;
-    /* height: 86px; */
+    height: 90px;
     padding: 10px 0;
     margin-bottom: 0;
 }
 nav ul{
     justify-content: space-between;
-    margin-right: 100px  ;
+    margin-right: 100px;
 }
 
 nav ul li a{
@@ -67,7 +67,7 @@ nav ul,
     background-image: url("./Images/solar-panels-meadow\ 1.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,10 +76,6 @@ nav ul,
 .line{
     display: flex;
     width: fit-content;
-    margin-top: -100px;
-    /* margin-bottom: 100px; */
-    /* background-color: #ff0000; */
-    /* padding: 0; */
     justify-content: center;
     align-items: center;
 }
@@ -195,6 +191,7 @@ nav ul,
 }
 .installers-div{
     justify-content: space-between;
+    gap: 30px;
 }
 .installers-left-side h1{
     color: #101828;
@@ -214,6 +211,9 @@ nav ul,
 }
 .installers-left-side ul li span{
     color: #84BD3A;
+}
+.solar-pan-img img{
+    width: 350px;
 }
 .solar-charging-div{
     background-color: var(--buttonBackgroundColor);
@@ -240,8 +240,6 @@ nav ul,
     background-color: #3CAB90;
     border-radius: 12px;
     padding: 8px;
-    /* width: 50px;
-    height: 46px; */
 }
 .energy-icon{
     border: 12px solid #E2F0E5;
@@ -382,7 +380,6 @@ footer,
     display: flex;
     align-items: start;
     justify-content: center;
-    /* flex-direction: row; */
 }
 .what-they-say-container{
     background-color: #f5fffd;
@@ -397,6 +394,9 @@ footer,
     align-items: center;
     justify-content: start;
 }
+.user-image{
+    width: 60px;
+}
 .user-info{
     line-height: 0.5;
     margin-left: 10px;
@@ -408,6 +408,7 @@ footer,
 }
 .job-description{
     font-weight: 400;
+    line-height: 17px;
 }
 .people-that-say-slider{
     justify-content: space-between;
@@ -416,8 +417,8 @@ footer,
 .right-side .btn{
     border: 1px solid var(--smallTextColor);
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     background-color: transparent;
     cursor: pointer;
 }
@@ -562,7 +563,103 @@ hr{
 
 /* Responsive design */
 
+#check:checked ~ nav {
+    left: 0;
+}
+
 @media (max-width: 768px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    nav {
+        background-color: #0B9586;
+        transition: 0.4s;
+        left: 100%;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        top: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        padding-left: 50px;
+    }
+    nav ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-right: 0;
+    }
+    nav ul li {
+        padding-top: 40px;
+        width: 100%;
+        margin-left: -50px;
+    }
+    nav ul li a{
+        margin-right: 0;
+    }
+    .callUs-div{
+        display: none;
+    }
+    label{
+        display: block;
+    }
+    .line{
+        margin-top: -70px;
+    }
+    .first-section-div h1{
+        font-size: 40px;
+    }
+    .first-section-div p{
+        font-size: 16px;
+    }
+    .text-div{
+        margin-top: 50px;
+        width: 100%;
+    }
+    .user-image ,.user-image img{
+        width: 45px;
+    }
+    .what-they-say-container{
+        padding: 20px;
+    }
+    .right-side .btn{
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+    .pagination-dots{   
+        width: 30%;
+    }
+    .user-info{
+        font-size: 14px;
+    }
+    .solar-charging-div{
+        width: 50%;
+        font-weight: 400;
+        font-size: 15px;
+        position: absolute;
+        margin-top: -220px;
+        margin-left: -10px;
+        padding: 20px;
+    }
+    .solar-pan-img{
+        width: 100%;
+        text-align: center;
+    }
+    .solar-pan-img img{
+        width: 350px;
+    }
+    .installers-div{
+        flex-direction: column;
+    }
+    .installers-left-side {
+        width: 100%;
+    }
     .solar-kits-cards{
         flex-direction: column;
     }
@@ -618,20 +715,92 @@ hr{
     }
     .power-div div{
         width: 100%;
-        /* background-color: red; */
     }
     .power-div h1{
         font-size: 30px;        
     }
     .power-div p{
         font-size: 16px;
-    }    
+    }  
+    .what-they-say-upper{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 
 
 
 
 @media (min-width: 769px) and (max-width: 992px){
+    nav ul li a{
+        font-size: 15px;
+        margin-right: 30px;
+    }
+    nav ul {
+        margin-right: 0;
+    }
+    nav ul li
+    .callUs-div p span{
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .line{
+        margin-top: -80px;
+    }
+    .first-section-div h1{
+        font-size: 45px;
+    }
+    .first-section-div p{
+        font-size: 18px;
+    }
+    .text-div{
+        margin-top: 50px;
+        width: 80%;
+    }
+    .user-image ,.user-image img{
+        width: 50px;
+    }
+    .what-they-say-container{
+        padding: 20px;
+    }
+    .right-side .btn{
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+    
+    .user-info{
+        font-size: 15px;
+    }
+    .pagination-dots{   
+        width: 20%;
+    }
+    .installers-div{
+        flex-direction: column;
+    }
+    .solar-charging-div{
+        width: 30%;
+        font-weight: 400;
+        font-size: 15px;
+        position: absolute;
+        margin-top: -220px;
+        margin-left: -30px;
+        padding: 20px;
+    }
+    .solar-pan-img{
+        width: 100%;
+        text-align: center;
+    }
+    .solar-pan-img img{
+        width: 350px;
+    }
+    .installers-div{
+        flex-direction: column;
+    }
+    .installers-left-side {
+        width: 100%;
+    }
     .power-div div{
         width: 90%;
     }
@@ -665,7 +834,7 @@ hr{
         gap: 1em;
     }
     .what-they-say-upper{
-        align-items: start;
+        align-items: center;
         justify-content: center;
         flex-direction: column;
     }
